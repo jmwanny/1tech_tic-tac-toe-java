@@ -50,7 +50,7 @@ A **Tic Tac Toe** desktop application built in **Java** using **Object-Oriented 
 git clone https://github.com/YOURUSERNAME/tic-tac-toe-java.git
 ```
 
-2. Open in IntelliJ IDEA
+2. Open in IntelliJ IDEA (or any Java IDE)
 
 3. Run:
 ```
