@@ -30,11 +30,10 @@ A Tic Tac Toe desktop game built in **Java** using Object-Oriented Programming c
 ### Menu
 ![Menu](assets/screenshots/menu.png)
 
-### Gameplay 1
+### Gameplays
 ![Gameplay](assets/screenshots/gameplay1.png)
-
-### Gameplay 2
 ![Gameplay](assets/screenshots/gameplay2.png)
+
 
 ### AI Difficulty
 ![AI Difficulty](assets/screenshots/difficulty.png)
