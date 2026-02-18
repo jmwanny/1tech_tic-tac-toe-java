@@ -52,7 +52,11 @@ git clone https://github.com/YOURUSERNAME/tic-tac-toe-java.git
 
 2. Open in IntelliJ IDEA (or any Java IDE)
 
-3. Run:
+3. Make sure JavaFX SDK is added as a library.
+
+Run Main.java.
+
+4. Run:
 ```
 Main.java
 ```
