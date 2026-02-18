@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="606.0" prefWidth="383.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoegame.controllers.GameController">
+
+    <children>
+
+        <ImageView fitHeight="606.0" fitWidth="383.0" pickOnBounds="true">
+            <image>
+                <Image url="@images/game-bg.png" />
+            </image>
+        </ImageView>
+
+        <GridPane hgap="10" layoutX="32.0" layoutY="137.0" prefHeight="300" prefWidth="350" vgap="10">
+
+            <columnConstraints>
+                <ColumnConstraints prefWidth="100" />
+                <ColumnConstraints prefWidth="100" />
+                <ColumnConstraints prefWidth="100" />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints prefHeight="100" />
+                <RowConstraints prefHeight="100" />
+                <RowConstraints prefHeight="100" />
+            </rowConstraints>
+
+
+                <Button fx:id="cell00" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" />
+                <Button fx:id="cell01" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" GridPane.columnIndex="1" />
+                <Button fx:id="cell02" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" GridPane.columnIndex="2" />
+
+                <Button fx:id="cell10" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" GridPane.rowIndex="1" />
+                <Button fx:id="cell11" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="cell12" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                <Button fx:id="cell20" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" GridPane.rowIndex="2" />
+                <Button fx:id="cell21" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="cell22" prefHeight="100" prefWidth="100" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:36" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+        </GridPane>
+
+        <Pane layoutX="32.0" layoutY="463.0" prefHeight="73" prefWidth="100" style="-fx-background-color:#6FD6E3; -fx-background-radius:10; -fx-font-family:'Brick Sans'; -fx-font-size:21px;">
+
+                <Label layoutX="21" layoutY="14" text="PLAYER 1" />
+                <Label fx:id="player1Label" layoutX="43" layoutY="32" text="0" />
+
+        </Pane>
+
+        <Pane layoutX="142.0" layoutY="463.0" prefHeight="73" prefWidth="100" style="-fx-background-color:#B8B7D3; -fx-background-radius:10; -fx-font-family:'Brick Sans'; -fx-font-size:21px;">
+                <Label alignment="CENTER" layoutX="36" layoutY="14" text="TIE" />
+                <Label fx:id="tieLabel" alignment="CENTER" layoutX="41" layoutY="32" text="0" />
+        </Pane>
+
+        <Pane layoutX="252.0" layoutY="463.0" prefHeight="73" prefWidth="100" style="-fx-background-color:#E8C45E; -fx-background-radius:10; -fx-font-family:'Brick Sans'; -fx-font-size:21px;">
+
+                <Label alignment="CENTER" layoutX="9" layoutY="14" prefWidth="82" text="PLAYER 2" />
+                <Label fx:id="player2Label" layoutX="46" layoutY="32" text="0" />
+        </Pane>
+
+        <ImageView fitHeight="94" fitWidth="111" layoutX="22" layoutY="22" preserveRatio="true">
+            <image>
+                <Image url="@images/tic-tac-toe-logo.png" />
+            </image>
+        </ImageView>
+
+        <Pane layoutX="147" layoutY="22" prefHeight="57" prefWidth="108" style="-fx-background-color:#1E1E1E; -fx-border-color:#00EAFF; -fx-border-width:2; -fx-background-radius:10; -fx-border-radius:10; -fx-font-size:20; -fx-font-family:'Segoe UI Black';">
+                <Label fx:id="labelTurn" alignment="CENTER" layoutX="14" layoutY="7" prefHeight="44" prefWidth="87" style="-fx-font-weight:bold; -fx-text-fill:white; " text="X TURN" />
+
+        </Pane>
+
+        <Pane fx:id="winnerPane" prefHeight="606" prefWidth="383" style="-fx-background-color:black; -fx-opacity:0.9;">
+                <Label fx:id="winnerLabel" alignment="CENTER" layoutX="130" layoutY="250" prefHeight="53" prefWidth="135" style="-fx-font-weight:bold; -fx-text-fill:#00EAFF; -fx-font-size:36px; -fx-text-alignment:center; -fx-font-family: 'Segoe UI Black';" text="LABEL" />
+                <Button fx:id="menuButton" layoutX="52" layoutY="331" onAction="#mainMenu" prefHeight="41" prefWidth="117" style="-fx-background-color:#1E1E1E; -fx-text-fill:#00EAFF; -fx-font-size:18px; -fx-font-weight:bold; -fx-border-radius:5; -fx-border-color:#00EAFF; -fx-font-family:'Brick Sans';" text="Main Menu">
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+
+                <Button fx:id="continueButton" layoutX="219" layoutY="331" onAction="#continueGame" prefHeight="41" prefWidth="117" style="-fx-background-color:#1E1E1E; -fx-text-fill:#00EAFF; -fx-font-size:18px; -fx-font-weight:bold; -fx-border-radius:5; -fx-border-color:#00EAFF; -fx-font-family:'Brick Sans';" text="Continue">
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+        </Pane>
+
+        <Button fx:id="muteBtn" layoutX="310" layoutY="20" onAction="#muteSound" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fx:id="muteIcon" fitHeight="49" fitWidth="52" preserveRatio="true">
+                    <image>
+                        <Image url="@images/volume.png" />
+                    </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+                </ImageView>
+            </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+        </Button>
+    </children>
+</AnchorPane>

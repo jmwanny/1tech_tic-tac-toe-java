@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="menuContainer" prefHeight="613.0" prefWidth="363.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoegame.controllers.MenuController">
+
+   <children>
+
+      <ImageView fitHeight="613.0" fitWidth="363.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@images/game-bg.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+
+      <ImageView fitHeight="119.0" fitWidth="135.0" layoutX="119.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/tic-tac-toe-logo.png" />
+         </image>
+      </ImageView>
+
+      <Pane layoutX="59.0" layoutY="151.0" prefHeight="146.0" prefWidth="246.0" style="-fx-background-color: rgba(0, 255, 255, 0.07); -fx-background-radius: 15;">
+         <children>
+
+            <ToggleButton fx:id="btnX" layoutX="35.0" layoutY="39.0" mnemonicParsing="false" onAction="#selectX" prefHeight="59.0" prefWidth="79.0" style="-fx-background-color: #121212; -fx-background-radius: 10; -fx-font-size: 32; -fx-text-fill: #00EAFF; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, #00EAFF, 8, 0.7, 0, 0); -fx-font-family: 'Segoe UI Black';" text="X">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ToggleButton>
+
+            <ToggleButton fx:id="btnO" layoutX="132.0" layoutY="39.0" mnemonicParsing="false" onAction="#selectO" prefHeight="59.0" prefWidth="79.0" style="-fx-background-color: #121212; -fx-background-radius: 10; -fx-font-size: 32; -fx-text-fill: #00EAFF; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, #00EAFF, 8, 0.7, 0, 0); -fx-font-family: 'Segoe UI Black';" text="O">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ToggleButton>
+
+            <Label layoutX="29.0" prefHeight="17.0" prefWidth="190.0" style="-fx-font-family: 'Brick Sans'; -fx-font-size: 27px;" text="PICK PLAYER 1'S MARK" textFill="WHITE" />
+
+            <Label contentDisplay="TOP" layoutX="54.0" layoutY="120.0" style="-fx-font-weight: bold;" text="REMEMBER: X GOES FIRST!" textFill="#ffffffc9">
+               <font>
+                  <Font name="Tahoma" size="10.0" />
+               </font>
+            </Label>
+
+         </children>
+      </Pane>
+
+      <Button id="pvpButton" layoutX="87.0" layoutY="322.0" mnemonicParsing="false" onAction="#handlePvP" prefHeight="49.0" prefWidth="198.0" style="-fx-font-size: 16; -fx-font-family: 'Brick Sans'; -fx-background-radius: 10; -fx-background-color: #1E1E1E; -fx-text-fill: white; -fx-border-color: #00EAFF; -fx-border-radius: 10; -fx-border-width: 2;" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+
+      <ImageView fitHeight="37.0" fitWidth="29.0" layoutX="112.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pvp.png" />
+         </image>
+      </ImageView>
+
+      <Label layoutX="152.0" layoutY="335.0" mouseTransparent="true" style="-fx-font-family: 'Brick Sans'; -fx-text-fill: white; -fx-font-size: 21px;" text="Player Vs Player" />
+
+
+      <Label layoutX="83.0" layoutY="381.0" style="-fx-text-fill: #00EAFF; -fx-font-style: italic;" text="Play with a friend on the same device." />
+
+      <Button id="aiButton" layoutX="87.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleAI" prefHeight="49.0" prefWidth="198.0" style="-fx-background-radius: 10; -fx-border-color: #00eaff; -fx-border-radius: 10; -fx-border-width: 2; -fx-font-size: 17; -fx-background-color: #1e1e1e;" textFill="white">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+
+      <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="112.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/versus.png" />
+         </image>
+      </ImageView>
+
+      <Label layoutX="155.0" layoutY="421.0" mouseTransparent="true" style="-fx-font-family: 'Brick Sans'; -fx-text-fill:white; -fx-font-size:24px;" text="Player Vs AI" />
+
+      <Label layoutX="79.0" layoutY="470.0" style="-fx-text-fill: #00EAFF; -fx-font-style: italic;" text="Challenge the AI and test your Strategy!" />
+
+      <Button fx:id="howBtn" layoutX="87.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleHowTo" prefHeight="49.0" prefWidth="198.0" style="-fx-background-radius: 10; -fx-border-color: #00eaff; -fx-border-radius: 10; -fx-border-width: 2; -fx-font-size: 13; -fx-background-color: #1e1e1e; -fx-font-family: 'Tahoma';" textFill="white">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+
+      <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="109.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/info.png" />
+         </image>
+      </ImageView>
+
+      <Label layoutX="155.0" layoutY="506.0" mouseTransparent="true" prefHeight="29.0" prefWidth="133.0" style="-fx-font-family: 'Brick Sans'; -fx-font-size: 23px;" text="How to Play" textFill="WHITE" />
+
+      <Label layoutX="95.0" layoutY="582.0" style="-fx-text-fill: #00EAFF;" text="Made by JAM Tech -  Version 1.0" />
+      <Group layoutX="33.0" layoutY="33.0">
+         <children>
+            <Button fx:id="muteBtn" mnemonicParsing="false" onAction="#muteSound" prefHeight="49.0" prefWidth="52.0" style="-fx-background-color: transparent; -fx-text-fill:white">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView onMouseClicked="#muteSound" fx:id="muteIcon" fitHeight="49.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/volume.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+
+            </Button>
+         </children>
+      </Group>
+
+
+   </children>
+
+</AnchorPane>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="613.0" prefWidth="363.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.tictactoegame.controllers.HowToController">
+
+    <children>
+
+        <ImageView fitHeight="613.0" fitWidth="363.0" pickOnBounds="true">
+            <image>
+                <Image url="@images/game-bg.png" />
+            </image>
+        </ImageView>
+
+        <ImageView fitHeight="72.0" fitWidth="83.0"
+                   layoutX="22.0" layoutY="14.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/tic-tac-toe-logo.png" />
+            </image>
+        </ImageView>
+
+        <VBox alignment="CENTER" layoutX="0" layoutY="80" prefWidth="363">
+            <Label style="-fx-font-size: 40; -fx-text-fill: white; -fx-font-family: 'Brick Sans';"
+                   text="HOW TO PLAY" />
+        </VBox>
+
+        <AnchorPane layoutX="43.0" layoutY="125.0"
+                    prefHeight="403.0" prefWidth="278.0"
+                    style="-fx-border-color: #00EAFF; -fx-border-width: 5; -fx-border-radius: 20;">
+            <children>
+
+                <HBox alignment="CENTER_LEFT" layoutX="10.0"
+                      prefHeight="102.0" prefWidth="262.0"
+                      style="-fx-border-color: #00EAFF; -fx-border-width: 0 0 4 0;">
+                    <children>
+                        <Label alignment="CENTER"
+                               prefHeight="40.0" prefWidth="76.0"
+                               style="-fx-text-fill: #00EAFF; -fx-font-size: 50; -fx-font-weight: bold;"
+                               text="X" />
+                        <Label prefHeight="98.0" prefWidth="178.0"
+                               style="-fx-text-fill: white; -fx-font-family: Verdana; -fx-font-weight: bold;"
+                               wrapText="true"
+                               text="1. PLAYER X STARTS BY PLACING AN X ON ANY EMPTY SQUARE.">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+
+                <Group layoutX="10.0" layoutY="102.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT"
+                              prefHeight="102.0" prefWidth="262.0"
+                              style="-fx-border-color: #00EAFF; -fx-border-width: 0 0 4 0;">
+                            <children>
+                                <Label alignment="CENTER"
+                                       prefHeight="40.0" prefWidth="76.0"
+                                       style="-fx-text-fill: #00EAFF; -fx-font-size: 50; -fx-font-weight: bold;"
+                                       text="O" />
+                                <Label alignment="CENTER"
+                                       prefHeight="98.0" prefWidth="158.0"
+                                       style="-fx-text-fill: white; -fx-font-family: Verdana; -fx-font-weight: bold; -fx-font-size: 15px;"
+                                       wrapText="true"
+                                       text="2. PLAYER O FOLLOWS BY PLACING AN O ON ANY SQUARE." />
+                            </children>
+                        </HBox>
+                    </children>
+                </Group>
+
+                <HBox alignment="CENTER_LEFT"
+                      layoutX="9.0" layoutY="200.0"
+                      prefHeight="98.0" prefWidth="266.0"
+                      style="-fx-border-color: #00EAFF; -fx-border-width: 0 0 4 0;">
+                    <children>
+                        <ImageView fitHeight="79.0" fitWidth="76.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/xo.png" />
+                            </image>
+                        </ImageView>
+
+                        <Label prefHeight="90.0" prefWidth="200.0"
+                               style="-fx-text-fill: white; -fx-font-family: Verdana; -fx-font-weight: bold; -fx-font-size: 15px;"
+                               wrapText="true"
+                               text="3. PLAYERS CONTINUE TAKING TURNS, PLACING ONE MARK PER TURN." />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT"
+                      layoutX="10.0" layoutY="304.0"
+                      prefHeight="83.0" prefWidth="262.0">
+                    <children>
+                        <ImageView fitHeight="75.0" fitWidth="77.0"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/trophy.png" />
+                            </image>
+                        </ImageView>
+
+                        <Label prefHeight="83.0" prefWidth="192.0"
+                               style="-fx-text-fill: white; -fx-font-family: Verdana; -fx-font-weight: bold; -fx-font-size: 15px;"
+                               wrapText="true"
+                               text="4. FIRST PLAYER TO CREATE A LINE OF THREE IDENTICAL MARKS WINS." />
+                    </children>
+                </HBox>
+
+            </children>
+        </AnchorPane>
+
+        <Button fx:id="menuButton"
+                alignment="CENTER"
+                layoutX="105.0" layoutY="534.0"
+                mnemonicParsing="false"
+                onAction="#mainMenu"
+                prefHeight="65.0" prefWidth="154.0"
+                style="-fx-border-color: #00EAFF; -fx-border-width: 4; -fx-border-radius: 10; -fx-background-color: transparent; -fx-text-fill: white; -fx-font-family: 'Brick Sans'; -fx-font-size: 27px;"
+                text="Main Menu">
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+        </Button>
+
+    </children>
+
+</AnchorPane>
