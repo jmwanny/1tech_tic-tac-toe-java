@@ -1,6 +1,6 @@
-# 🎮 Tic Tac Toe Java Game
+# Tic Tac Toe Desktop Game (Java)
 
-A Tic Tac Toe desktop game built in **Java** using Object-Oriented Programming concepts as a BSIT 2nd Year project.
+A **Tic Tac Toe** desktop application built in **Java** using **Object-Oriented Programming (OOP)** concepts. Developed as a **BSIT 2nd Year project**, I was the **main developer**, while my groupmates handled the **UI/UX design**.
 
 ---
 
